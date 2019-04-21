@@ -112,3 +112,65 @@ for (let [index, elem] of ['a', 'b'].entries()) {
 
 [1, 2, 3].includes(2)     // true
 
+/**
+ * object
+ */
+
+/**
+ * 简介
+ */
+
+const foo = 'bar';
+
+const Pe = {
+  foo,
+  _gfoo: 'good',
+  bar() {
+    // do sth
+  }
+  get gfoo(){
+    return rhis.gfoo;
+  }
+  set gfoo(v){
+    this._gfoo = v + ' ---';
+  }
+}
+
+/**
+ * 属性名表达式
+ */
+
+let propKey = 'foo';
+
+let obj = {
+  [propKey]: true,
+  ['a' + 'bc']: 123
+};
+
+/**
+ * 解构赋值
+ */
+
+let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+
+/**
+ * 扩展运算符
+ */
+
+let z = { a: 3, b: 4 };
+let n = { ...z };
+
+// defaults
+
+let e = {
+  e: 1,
+};
+
+let f = {
+  f: 1,
+  e: 2,
+};
+
+let ef = { ...e, ...f };
+
+
